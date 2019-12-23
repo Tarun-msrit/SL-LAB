@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+		#clr :hover{
+			text-color: violet;
+		}
+	</style>
+</head>
+<body>
+            <p onmouseover="JnuShow()">Jnu Hospital</p>
+            <p onmouseover="rajaShow()">Raja Hospital</p>
+            <p onmouseover="queenShow()">Queen Hospital</p>
+
+            <table id="data" hidden border=1>
+		<p id="clr">Patient Details: </p>
+	<tr>
+		<td>Name</td>
+		<td id="name"></td>
+	</tr>
+	<tr>
+		<td>Aadhar No</td>
+		<td id="aadhar"></td>
+	</tr>
+	<tr>
+		<td>Lab tests</td>
+		<td id="tests"></td>
+	</tr>
+    </table>
+    <script>
+
+        patient=[
+				{
+					"name":"Rahul",
+					"aadhar":"1239603923",
+					"tests":['ABC','XYZ','DPT'],
+					"hosp":"JUHU Hospital"
+				},
+
+				{
+					"name":"Koyna",
+					"aadhar":"12459203923",
+					"tests":['DEF','LOR','LOP'],
+					"hosp":"CMH Hospital"
+				},
+
+				{
+					"name":"Dhriti",
+					"aadhar":"1239203823",
+					"tests":['JUX','KOL','LOH'],
+					"hosp":"Fortis Hospital"
+				}
+			]
+
+			hospital=[
+				{
+					"name":"JUHU Hospital",
+					"loc":"Mumbai"
+				},
+				{
+					"name":"CMH Hospital",
+					"loc":"Bangalore"
+				},
+				{
+					"name":"Fortis Hospital",
+					"loc":"Delhi"
+				}
+            ]
+        function JnuShow(){
+            document.getElementById('data').removeAttribute("hidden")
+            document.getElementById('name').innerHTML=patient[0].name
+            document.getElementById('aadhar').innerHTML=patient[0].aadhar
+            document.getElementById('tests').innerHTML=patient[0].tests
+            document.getElementById('clr').style.color="violet"
+        }
+        function rajaShow(){
+            document.getElementById('data').removeAttribute("hidden")
+            document.getElementById('name').innerHTML=patient[1].name
+            document.getElementById('aadhar').innerHTML=patient[1].aadhar
+            document.getElementById('tests').innerHTML=patient[1].tests
+            document.getElementById('clr').style.color="green"
+        }
+        function queenShow(){
+            document.getElementById('data').removeAttribute("hidden")
+            document.getElementById('name').innerHTML=patient[2].name
+            document.getElementById('aadhar').innerHTML=patient[2].aadhar
+            document.getElementById('tests').innerHTML=patient[2].tests
+            document.getElementById('clr').style.color="Orange"
+        }
+    </script>
+
+</body>
+</html>

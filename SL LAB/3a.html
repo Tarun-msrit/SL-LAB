@@ -1,0 +1,64 @@
+<html>
+    <body>
+    <h1> Authors and their works</h1>
+    <table border=2>
+      <th>AUTHOR NAME</th>
+      <th>NATIVE COUNTRY</th>
+      <th>BOOKTITLE</th>
+      <th>PUBLICATION YEAR</th>
+      <tr>
+        <td id="author0"></td>
+        <td id="country0"></td>
+        <td id="title0"></td>
+        <td id="year0"></td>
+      </tr>
+      <tr>
+            <td id="author1"></td>
+            <td id="country1"></td>
+            <td id="title1"></td>
+            <td id="year1"></td>
+      </tr>
+      
+    </table>
+    <p id="author2"></p> 
+    <p id="country2"></p>
+    <p id="title2"></p>
+    <p id="year2"></p>
+    <p id="author3"></p> 
+    <p id="country3"></p>
+    <p id="title3"></p>
+    <p id="year3"></p>
+    <script>
+
+            var authors = [{"name" : "Rajesh", "country" : "india", "title"  : "C++ programming", "year" : "1961"},{"name" : "Akram", "country" : "pakistan", "title"  : "microprocessors", "year" : "1947"},{"name" : "steve", "country" : "nepal", "title"  : "java coding", "year" : "2006"},{"name" : "mark", "country" : "sweden", "title"  : "python coding","year" : "2002"}];
+            var i;
+            for(i=0;i<4;i++)
+            {
+                document.getElementById("author"+i).innerHTML=Object.values(authors)[i].name;
+                document.getElementById("country"+i).innerHTML=Object.values(authors)[i].country;
+                document.getElementById("title"+i).innerHTML=Object.values(authors)[i].title;
+                document.getElementById("year"+i).innerHTML=Object.values(authors)[i].year;
+            }
+            
+            
+            // var obj0 = authors[0];
+            // var obj1 = authors[1];
+            // var obj2 = authors[2];
+            // var obj3 = authors[3];
+            // document.getElementById("author0").innerHTML = obj0.name;
+            // document.getElementById("country0").innerHTML = obj0.country;
+            // document.getElementById("title0").innerHTML = obj0.title;
+            // document.getElementById("year0").innerHTML = obj0.year;
+
+            // document.getElementById("author1").innerHTML = obj1.name;
+            // document.getElementById("country1").innerHTML = obj1.country;
+            // document.getElementById("title1").innerHTML = obj1.title;
+            // document.getElementById("year1").innerHTML = obj1.year;
+             
+            // document.getElementById("author2").innerHTML = obj2.name+"\t\tis from\t\t"+obj2.country+"\t\tand title is\t\t"+obj2.title+"\n\npublished in the year\t\t"+obj2.year;
+            // document.getElementById("author3").innerHTML = obj3.name+"\t\tis from\t\t"+obj3.country+"\t\tand title is\t\t"+obj3.title+"\n\npublished in the year\t\t"+obj3.year;
+            
+    </script>
+                                            
+    </body>
+ </html> 
